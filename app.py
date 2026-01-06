@@ -64,6 +64,5 @@ while True:
     reply = random.choice(responses[emotion])
     print(f"Wellness Buddy ({emotion.title()}): {reply}\n")# WELLNESS BUDDY
         "You’re stronger than you think. This feeling will pass 💪",
-        "Sending you a virtual hug 🤗 You’re not alone."
-    ],
+        "Sending you a virtual hug 🤗 You’re not alone.") 
     
