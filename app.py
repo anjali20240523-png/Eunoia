@@ -34,7 +34,21 @@ responses = {
         "It’s okay to rest. You don’t have to do everything at once 🌤️",
         "Remember, your best is enough 💖 Take small steps."
     ]
-}
+    "facts" : [
+    "That’s an interesting fact 🌍",
+    "Good to know! Knowledge always adds perspective.",
+    "Facts like these shape how we understand the world.",
+    "That’s true — and it’s fascinating when you think about it.",
+    "Noted! Would you like to reflect on how this connects to you?"
+    ]
+    "activity" : [
+    "Nice — small routines keep life steady 🌱",
+    "That sounds like a healthy habit.",
+    "Daily actions may seem small, but they matter.",
+    "Good going! Consistency builds balance.",
+    "Simple moments like these keep us grounded."
+    ]
+    }
 
 # 2. Function to detect emotion
 def detect_emotion(text):
@@ -51,7 +65,7 @@ def detect_emotion(text):
         return "activity"
     elif any(word in text for word in ["fact", "did you know", "information", "tell me"]):
         return "fact"
-else:
+    else:
         return "neutral"
 
 # 3. Main chat loop
