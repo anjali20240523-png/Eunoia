@@ -33,14 +33,14 @@ responses = {
         "Pause for a moment. Inhale… exhale… you’re doing fine 🌸",
         "It’s okay to rest. You don’t have to do everything at once 🌤️",
         "Remember, your best is enough 💖 Take small steps."
-    ]
+    ], 
     "facts" : [
     "That’s an interesting fact 🌍",
     "Good to know! Knowledge always adds perspective.",
     "Facts like these shape how we understand the world.",
     "That’s true — and it’s fascinating when you think about it.",
     "Noted! Would you like to reflect on how this connects to you?"
-    ]
+    ], 
     "activity" : [
     "Nice — small routines keep life steady 🌱",
     "That sounds like a healthy habit.",
