@@ -3,7 +3,7 @@
 # Developed by [Anjali Joshi], Class 12F
 
 import random
-
+import streamlit as st
 # 1. Emotion-based responses
 responses = {
     "happy": [
@@ -38,7 +38,7 @@ responses = {
 
 # 2. Function to detect emotion
 def detect_emotion(text):
-  x  text = text.lower()
+    text = text.lower()
     if any(word in text for word in ["happy", "joy", "great", "excited", "good","love","like"]):
         return "happy"
     elif any(word in text for word in ["sad", "depressed", "cry", "lonely", "upset","bad","worst"]):
@@ -47,22 +47,20 @@ def detect_emotion(text):
         return "angry"
     elif any(word in text for word in ["stress", "tired", "nervous", "anxious", "pressure"]):
         return "stressed"
-    else:
+    elif any(word in text for word in ["brush", "eat", "study", "walk", "sleep", "homework", "exercise"]):
+        return "activity"
+    elif any(word in text for word in ["fact", "did you know", "information", "tell me"]):
+        return "fact"
+else:
         return "neutral"
 
 # 3. Main chat loop
-print("💬 Wellness Buddy 2.0 is here to talk to you 💬")
-print("Type 'bye' anytime to end the chat.\n")
+st.title("EUNOIA 🌿")
+st.subheader("Your AI Emotional Wellness Buddy")
 
-while True:
-    user_input = input("You: ")
-    if user_input.lower() == "bye":
-        print("Wellness Buddy: Take care of yourself 💚 Bye!")
-        break
+user_input = st.text_input("How are you feeling today?")
 
+if user_input:
     emotion = detect_emotion(user_input)
     reply = random.choice(responses[emotion])
-    print(f"Wellness Buddy ({emotion.title()}): {reply}\n")# WELLNESS BUDDY
-        "You’re stronger than you think. This feeling will pass 💪",
-        "Sending you a virtual hug 🤗 You’re not alone.") 
-    
+    st.success(reply)
